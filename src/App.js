@@ -1,14 +1,17 @@
 import React from 'react';
 import './App.css';
-import Home from './Home'
 import {TodoProvider} from "./Context"
+import {TextProvider} from "./Context2"
+import Home from './Home'
 
 
 function App() {
   return (
-    <TodoProvider>
-      <Home />
-    </TodoProvider>
+    <TextProvider>
+      <TodoProvider>
+        <Home />
+      </TodoProvider>
+    </TextProvider>
   )
 }
 
